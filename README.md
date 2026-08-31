@@ -24,6 +24,14 @@ face for the brace plate). A halves only mate with A, B with B — the lap is ha
 Flat, no supports. PETG, 4+ walls, 30 %+ infill. Layers run along the post and tray, which
 is the strong direction; never print these standing up.
 
+### Fully printable brace (alternative to the extrusion)
+
+No aluminum, no extra fasteners: a telescoping square tube that plugs into the same brace
+plate sockets and is captive once the brackets are mounted. Measure plate face to plate
+face, set `SPAN` in `tools/brace_beam.py`, run it, print what it lists (1, 2, or 3 pieces
+depending on span; up to ~625 mm). Tube bores have a 45° roof — insert rods roof-up.
+Lighter duty than the extrusion; use the extrusion if the frame ever feels rubbery.
+
 ## Hardware
 
 - 4 × M4 pan head, **×20 without brace / ×25–30 with brace** (2 per bracket; they are the
