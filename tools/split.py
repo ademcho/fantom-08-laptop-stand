@@ -52,7 +52,14 @@ removed = v0 - bottom.volume - top.volume
 print(f'original {v0/1000:.1f} cm3, removed by holes/pockets/gap {removed/1000:.2f} cm3')
 assert 0 < removed < 5000
 
-export_stl(bottom, 'exports/bracket_bottom.stl')
-export_stl(top, 'exports/bracket_top.stl')
+export_stl(bottom, 'exports/bracket_bottom_A.stl')
+export_stl(top, 'exports/bracket_top_A.stl')
+# Set B is mirrored across the thickness mid-plane so its nut pockets face outward
+# when the two brackets stand facing each other (brace plates go on the plain inner faces).
+# A halves only mate with A, B with B - the lap handedness mirrors too.
+mirr = Plane((0, MID, 0), x_dir=(1, 0, 0), z_dir=(0, 1, 0))
+bottom_b, top_b = mirror(bottom, about=mirr), mirror(top, about=mirr)
+export_stl(bottom_b, 'exports/bracket_bottom_B.stl')
+export_stl(top_b, 'exports/bracket_top_B.stl')
 export_step(Compound(children=[bottom, top], label='Fantom Stand split'), 'exports/bracket_split.step')
 print('ok')
