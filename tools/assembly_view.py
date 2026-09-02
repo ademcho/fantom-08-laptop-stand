@@ -28,7 +28,8 @@ bot_b = mirror(bot_a, about=mirr).moved(Location((0, Y_B, 0)))
 top_b = mirror(top_a, about=mirr).moved(Location((0, Y_B, 0)))
 
 # --- plates: A side sits at identity by construction; B side rotated 180 about vertical
-plate_a = plate
+plate_a = import_step('exports/brace_mount.step').solid()  # independent import: the STEP writer
+# aliases products that share an underlying shape and silently drops one
 plate_b = plate.rotate(Axis((-10, 0, 185), (0, 0, 1)), 180).moved(Location((0, SPAN + 40, 0)))
 
 def place_beam(p, y_tip, tip_at_min, flip=False):
@@ -63,4 +64,6 @@ scene = Compound(children=list(parts.values()), label='Fantom Stand assembly')
 b = scene.bounding_box()
 print(f'scene: X {b.size.X:.0f} Y {b.size.Y:.0f} Z {b.size.Z:.0f} mm, {len(scene.solids())} solids')
 export_step(scene, 'exports/full_assembly.step')
-print('ok')
+n = len(import_step('exports/full_assembly.step').solids())
+assert n == 8, f'STEP round-trip lost parts: {n}/8'
+print('ok, round-trip 8/8')
