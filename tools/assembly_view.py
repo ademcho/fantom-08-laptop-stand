@@ -54,6 +54,9 @@ for (na, pa), (nb, pb) in [(('Brace outer tube', outer), ('Brace inner rod', inn
     r = pa & pb
     v = 0 if r is None else r.volume
     assert v < 1, f'{na} intersects {nb}: {v:.1f}mm3'
+# Onshape's STEP import ignores lazy child placements - bake world coords into geometry
+BIGBOX = Box(3000, 3000, 3000)
+parts = {n: (p & BIGBOX) for n, p in parts.items()}
 for name, p in parts.items():
     p.label = name
 scene = Compound(children=list(parts.values()), label='Fantom Stand assembly')
