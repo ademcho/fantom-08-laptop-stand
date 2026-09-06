@@ -32,6 +32,14 @@ face, set `SPAN` in `tools/brace_beam.py`, run it, print what it lists (1, 2, or
 depending on span; up to ~625 mm). Tube bores have a 45° roof — insert rods roof-up.
 Lighter duty than the extrusion; use the extrusion if the frame ever feels rubbery.
 
+### Fit coupons
+
+`tools/coupons.py` generates thin (5 mm) slices of the clamp profile with the opening
+(rear wall → keybed lip, nominal 169 mm) enlarged by +1.0/+1.5/+2.0/+2.5 mm —
+`exports/coupon_plus*.stl`, size engraved on each. Print flat, 2 walls / ~10 % infill.
+The stretch is mid-arm only; post, foot, and joint are untouched, so the winning delta
+can be applied to the arm length in the source sketch without breaking the lap joint.
+
 ## Hardware
 
 - 4 × M4 pan head, **×20 without brace / ×25–30 with brace** (2 per bracket; they are the
