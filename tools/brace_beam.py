@@ -14,7 +14,7 @@ the tube bore has a 45-degree roof instead of a flat bridge (insert rods roof-up
 """
 from build123d import *
 
-SPAN = 400.0        # mm, plate face to plate face -- MEASURE AND SET
+SPAN = 242.6        # mm, plate face to plate face: 11 1/8" (282.6) bracket inner faces - 2 x 20 plate
 SOCKET, PLUG = 10.0, 12.0
 SEG, OVLP = 240.0   , 40.0    # max printable piece, min telescope overlap
 OD, WALL = 20.0, 2.2          # outer tube: fits the 20.4 socket

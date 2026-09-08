@@ -6,7 +6,7 @@ an Assembly tab. Coordinates: X forward, Y along the keyboard, Z up.
 """
 from build123d import *
 
-SPAN, SOCKET, OVLP = 400.0, 10.0, 40.0   # keep in sync with tools/brace_beam.py
+SPAN, SOCKET, OVLP = 242.6, 10.0, 40.0   # keep in sync with tools/brace_beam.py
 MID = -7.5
 
 def solids_by_z(shape):  # (bottom, top) of the split bracket
@@ -37,7 +37,7 @@ def place_beam(p, y_tip, tip_at_min, flip=False):
     if flip:
         p = p.rotate(Axis.Z, 180)   # move the plug to the far end; roof stays up
     b = p.bounding_box()
-    assert b.size.Y > 100, b                      # length now along Y
+    assert b.size.Y > 40 and b.size.Y > b.size.X, b   # length now along Y (inner rod is short at small spans)
     dy = y_tip - (b.min.Y if tip_at_min else b.max.Y)
     return p.moved(Location((-10 - (b.min.X + b.max.X) / 2, dy, 185 - (b.min.Z + b.max.Z) / 2)))
 

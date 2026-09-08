@@ -1,4 +1,6 @@
-# Fantom-08 laptop bracket
+# Fantom-08 laptop stand
+
+![Two clip-on brackets with a telescoping cross brace](docs/assembly.png)
 
 Clip-on laptop stand for a Roland Fantom-08. Print two brackets; they hook over the rear
 panel and under the case bottom at the two clear spots on the panel. Laptop sits on the
@@ -17,9 +19,15 @@ face for the brace plate). A halves only mate with A, B with B — the lap is ha
 
 | file | size (mm) | qty | lay on bed |
 |---|---|---|---|
-| `exports/bracket_bottom_A.stl` / `_B` | 199 × 221 × 15 | 1 each | nut-pocket face down |
+| `exports/bracket_bottom_A.stl` / `_B` | 200 × 221 × 15 | 1 each | nut-pocket face down |
 | `exports/bracket_top_A.stl` / `_B` | 213 × 144 × 15 | 1 each | plain face down (tongue step up) |
+| `exports/bracket_bottom_B_usb.stl` | 200 × 221 × 46 | instead of `_B` on a Fantom-08 | nut-pocket face down |
 | `exports/brace_mount.stl` | 28 × 90 × 20 | 2 | flat back down |
+
+The player's-right bracket lands on the rear USB cluster, so its bottom half is `_B_usb`: the post
+is cut away over the port band (28 mm wide, 6 mm vertical margin on your 54 / 28 mm measurements)
+and rerouted as a hump on the inner face with a 45° gable roof, so it still prints flat with no
+supports. Constants are at the bottom of `tools/split.py` if the ports sit elsewhere.
 
 Flat, no supports. PETG, 4+ walls, 30 %+ infill. Layers run along the post and tray, which
 is the strong direction; never print these standing up.
@@ -35,18 +43,23 @@ Lighter duty than the extrusion; use the extrusion if the frame ever feels rubbe
 ### Fit coupons
 
 `tools/coupons.py` generates thin (5 mm) slices of the clamp profile with the opening
-(rear wall → keybed lip, nominal 169 mm) enlarged by +1.0/+1.5/+2.0/+2.5 mm —
+(rear wall → keybed lip) enlarged by +1.0/+1.5/+2.0/+2.5 mm —
 `exports/coupon_plus*.stl`, size engraved on each. Print flat, 2 walls / ~10 % infill.
 The stretch is mid-arm only; post, foot, and joint are untouched, so the winning delta
 can be applied to the arm length in the source sketch without breaking the lap joint.
+The +1.0 coupon won (2026-09-06): the sketch now has the opening at 170 mm, and the arm
+over the rear panel was dropped from 20 to 12 mm tall at the same time — it only bears on
+the panel and pulls on the lip, and the lower bar is ~5× easier to spring on and blocks
+less of the panel. Coupons are still cut from the current profile if you need to re-run.
 
 ## Hardware
 
 - 4 × M4 pan head, **×20 without brace / ×25–30 with brace** (2 per bracket; they are the
   lap-joint bolts, and with the brace the same bolts also hold the brace plates)
 - 4 × M4 hex nut — drops into the hex pocket on the bracket's outer face
-- 1 × 2020 aluminum extrusion (European standard, 6 mm slot), cut to span between the
-  brackets + 2 × 14 mm socket engagement (cut a few mm short of max; the sockets are 10 mm deep)
+- 1 × 2020 aluminum extrusion (European standard, 6 mm slot), cut to plate face to plate
+  face + 2 × 10 mm sockets, a couple of mm short: **260 mm** for the measured 11⅛" (282.6 mm)
+  bracket spacing (plate faces 242.6 apart)
 - optional: 2 × M5 × 16 pan head, self-tapped into the extrusion's ~4.2 mm center bore
   through the back of each brace plate (the extrusion is already captive once both brackets
   are mounted; the screws only matter if you want the frame rigid off the keyboard)
@@ -69,7 +82,8 @@ Example Amazon (US) sources, checked 2026-08-30: M4 assortment kit with nuts+was
 ## Regenerate after editing the profile
 
 ```
-.venv/bin/python tools/split.py    # needs a fresh exports/bracket_current.step from Onshape
+.venv/bin/python tools/fetch_step.py   # pulls exports/bracket_current.step from Onshape
+.venv/bin/python tools/split.py
 .venv/bin/python tools/brace.py
 ```
 
@@ -77,3 +91,8 @@ Example Amazon (US) sources, checked 2026-08-30: M4 assortment kit with nuts+was
 `~/.config/onshape/credentials.env`). Joint and brace parameters (lap span, bolt positions,
 clearances, socket size) sit at the top of `split.py` / `brace.py`; bolt positions must match
 between the two.
+
+## License
+
+Models, exports, and code: [CC BY 4.0](LICENSE). Print it, remix it, sell it; just credit
+Abe Demcho and link back here.

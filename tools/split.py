@@ -12,10 +12,10 @@ with hex nut pockets on the back face of the bottom piece.
 from math import sqrt
 from build123d import *
 
-LAP_LO, LAP_HI = 142.0, 228.0   # post is 20mm wide here; arm top is at 138.6, left fillet starts at 232
+LAP_LO, LAP_HI = 142.0, 228.0   # post is 20mm wide here; arm top is at 130.6 (R45 fillet ends at 175.6), left fillet starts at 232
 GAP = 0.3                        # shoulder clearance so the halves seat
 MID = -7.5                       # thickness mid-plane
-BOLT_X, BOLT_Z = -10.0, (154.0, 216.0)   # post centreline; sections are 31mm / 22mm wide here
+BOLT_X, BOLT_Z = -10.0, (154.0, 216.0)   # post centreline; sections are 26mm / 22mm wide here
 HOLE_D, NUT_AF, NUT_DEPTH = 4.4, 7.3, 3.5  # M4 clearance, M4 nut 7.0 AF + play
 
 part = import_step('exports/bracket_current.step')
@@ -61,5 +61,30 @@ mirr = Plane((0, MID, 0), x_dir=(1, 0, 0), z_dir=(0, 1, 0))
 bottom_b, top_b = mirror(bottom, about=mirr), mirror(top, about=mirr)
 export_stl(bottom_b, 'exports/bracket_bottom_B.stl')
 export_stl(top_b, 'exports/bracket_top_B.stl')
+
+# --- USB bypass for the bracket that lands on the rear-panel USB cluster (player's right = B).
+# The post is cut away over the port band and rerouted as a hump on the plain (inner) face,
+# which is the face that points up when printing pocket-face-down. The cutout has a 45 deg
+# gable roof so nothing bridges. Only one side can carry the bypass on a flat print, so the
+# void clears the ports fully on the pocket side (open to the bed) and by USB_HALF_W + 4 mm
+# beyond the mid-plane on the hump side.
+KB_BOT, KB_TOP = 23.1, 118.6                   # case bottom (tooth tips) / case top (arm underside)
+USB_LO, USB_HI, USB_MARGIN = 54.0, 28.0, 6.0   # measured: case bottom -> port bottom, case top -> port top
+USB_HALF_W, LEG_T, PILLAR = 14.0, 8.0, 12.0    # half of the 28 mm cluster (buffer included), hump leg, pillar height
+Z0, Z1 = KB_BOT + USB_LO - USB_MARGIN, KB_TOP - USB_HI + USB_MARGIN
+Y_CEIL = MID + USB_HALF_W + 4.0                # void ceiling above the plain face (y=0)
+APEX = Y_CEIL + (Z1 - Z0) / 2                  # 45 deg gable
+hump = box(-20, 0, 0, APEX + LEG_T, Z0 - PILLAR, Z1 + PILLAR)
+void = extrude(Plane.YZ.offset(-25) * Polygon((-16, Z0), (Y_CEIL, Z0), (APEX, (Z0 + Z1) / 2), (Y_CEIL, Z1), (-16, Z1), align=None), amount=30)
+bottom_usb = bottom + hump - void
+ports = box(-20, 0, MID - USB_HALF_W, MID + USB_HALF_W, KB_BOT + USB_LO, KB_TOP - USB_HI)   # measured cluster envelope
+assert len(bottom_usb.solids()) == 1
+def vol(x): return 0.0 if x is None else x.volume   # build123d returns None for an empty intersection
+assert vol(bottom_usb & ports) < 1e-6, 'hump intersects the port envelope'
+assert vol(bottom_usb & box(-20, 0, -20, 10, Z0, Z1)) < 1e-6, 'void not clear to +10 over the band'
+bb = bottom_usb.bounding_box()
+print(f'bottom_B_usb: window z {Z0:.1f}..{Z1:.1f}, void ceiling y=+{Y_CEIL:.1f}, hump to y=+{bb.max.Y:.1f}, vol {bottom_usb.volume/1000:.1f} cm3')
+export_stl(mirror(bottom_usb, about=mirr), 'exports/bracket_bottom_B_usb.stl')
+export_step(mirror(bottom_usb, about=mirr), 'exports/bracket_bottom_B_usb.step')
 export_step(Compound(children=[bottom, top], label='Fantom Stand split'), 'exports/bracket_split.step')
 print('ok')

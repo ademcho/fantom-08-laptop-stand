@@ -1,2 +1,5 @@
 .venv/
 __pycache__/
+analysis/
+exports/*.3mf
+.DS_Store
