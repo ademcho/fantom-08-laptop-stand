@@ -1,6 +1,6 @@
 # Fantom-08 laptop stand
 
-![Two clip-on brackets with a telescoping cross brace](docs/assembly.png)
+![Laptop on the stand above a Fantom-08](docs/hero.jpg)
 
 Clip-on laptop stand for a Roland Fantom-08. Print two brackets; they hook over the rear
 panel and under the case bottom at the two clear spots on the panel. Laptop sits on the
@@ -9,6 +9,10 @@ the pair side-to-side.
 
 Design lives in Onshape: `Part Studio 1` is the source profile (one sketch + 15 mm extrude).
 `Fantom Stand - Bracket 1.2 split` and `Fantom Stand - Brace mount` are generated.
+
+| | |
+|---|---|
+| ![Both brackets with the 2020 extrusion brace](docs/front-brace.jpg) | ![The USB window clearing the rear ports](docs/usb-window.jpg) |
 
 ## Print
 
