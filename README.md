@@ -36,6 +36,24 @@ supports. Constants are at the bottom of `tools/split.py` if the ports sit elsew
 Flat, no supports. PETG, 4+ walls, 30 %+ infill. Layers run along the post and tray, which
 is the strong direction; never print these standing up.
 
+### Replacement bottoms: more key clearance (2026-09-16)
+
+The downward key-facing hook is now **2.5 mm shorter** (17.5 mm below the arm,
+previously 20 mm). The 170 mm opening, top halves, lap joints, brace attachment and
+USB window remain unchanged. Existing owners only need to reprint the two bottoms.
+
+Open [bottom_brackets_key_clearance_X2D.3mf](exports/bottom_brackets_key_clearance_X2D.3mf)
+in Bambu Studio and print **both plates**: plate 1 is right B with USB clearance;
+plate 2 is left A. They are already flat, nut-pocket face down. PETG, 0.4 mm nozzle,
+0.20 mm layers, 4 walls, 30% infill, **no supports**. Estimated total: **137 g / 3 h 53 min**.
+Select your actual bed and PETG, then re-slice; the project contains no cached G-code.
+Check clearance with the nearby keys released and pressed after installation.
+
+The source Onshape export is retained; `HOOK_SHORTEN` in `tools/split.py` applies
+this trim on regeneration. CAD comparison confirmed only the hook tips changed,
+upper STLs are byte-identical, and both bottoms sliced without mesh repairs or
+skipped/out-of-bed objects. [Verification record](exports/bottom_reprint_check.json).
+
 ### Fully printable brace (alternative to the extrusion)
 
 No aluminum, no extra fasteners: a telescoping square tube that plugs into the same brace

@@ -2,7 +2,8 @@
 """Split the Fantom bracket into two printable halves with a half-lap joint.
 
 Input : exports/bracket_current.step (pulled from Onshape, single 15mm extrude)
-Output: exports/bracket_bottom.stl, exports/bracket_top.stl, exports/bracket_split.step
+Output: mirrored A/B halves, USB bottom B, and exports/bracket_split.step.
+Shortens the source profile's downward keybed hook during generation.
 
 Part-studio coords: X = forward (toward keys), Z = up, Y = thickness (-15..0).
 Joint: half-lap on the post between Z=LAP_LO and Z=LAP_HI. Bottom piece keeps the
@@ -17,6 +18,8 @@ GAP = 0.3                        # shoulder clearance so the halves seat
 MID = -7.5                       # thickness mid-plane
 BOLT_X, BOLT_Z = -10.0, (154.0, 216.0)   # post centreline; sections are 26mm / 22mm wide here
 HOLE_D, NUT_AF, NUT_DEPTH = 4.4, 7.3, 3.5  # M4 clearance, M4 nut 7.0 AF + play
+HOOK_SHORTEN = 2.5               # raise the key-facing hook tip; keep the arm and 170 mm opening
+assert 0 <= HOOK_SHORTEN <= 3
 
 part = import_step('exports/bracket_current.step')
 bb = part.bounding_box()
@@ -26,6 +29,24 @@ v0 = part.volume
 BIG = 1000
 def box(x0, x1, y0, y1, z0, z1):
     return Box(x1 - x0, y1 - y0, z1 - z0).moved(Location(((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2)))
+
+# Locate the 10 x 15 mm downward-facing hook tip in the unmodified source.
+# This is applied after every Onshape fetch, so regeneration retains the fix.
+tips = [f for f in part.faces() if f.bounding_box().min.X > 100
+        and f.bounding_box().max.Z < 140 and f.bounding_box().size.Z < 1e-6
+        and abs(f.area - 150) < .001]
+assert len(tips) == 1, 'Source hook profile changed; review the shortening cut'
+tip = tips[0].bounding_box()
+assert abs(tip.min.X-170) < .001 and abs(tip.max.X-180) < .001
+hook_cut = box(tip.min.X-.01, tip.max.X+.01, -16, 1,
+               tip.min.Z-1, tip.min.Z+HOOK_SHORTEN)
+original = part
+part -= hook_cut
+assert part.is_valid and len(part.solids()) == 1
+assert abs(original.volume-part.volume-150*HOOK_SHORTEN) < .001
+hook_after = part & box(tip.min.X, tip.max.X, -16, 1, tip.min.Z-1, tip.min.Z+20)
+assert abs(hook_after.bounding_box().min.Z-tip.min.Z-HOOK_SHORTEN) < .001
+print(f'Hook tip raised {HOOK_SHORTEN:.1f} mm: Z {tip.min.Z:.3f} -> {tip.min.Z+HOOK_SHORTEN:.3f}')
 
 POST_XMAX = 60  # lap only spans the post; the tray lip (x>145) dips below LAP_HI and stays with the top piece
 bottom = part & (box(-BIG, BIG, -BIG, BIG, -BIG, LAP_LO) + box(-BIG, POST_XMAX, -BIG, MID, LAP_LO, LAP_HI - GAP))
@@ -47,7 +68,7 @@ for name, p in (('bottom', bottom), ('top', top)):
     b = p.bounding_box()
     print(f'{name}: X {b.size.X:6.1f}  Y {b.size.Y:5.1f}  Z {b.size.Z:6.1f}  vol {p.volume/1000:.1f} cm3  solids {len(p.solids())}')
     assert b.size.X <= 250 and b.size.Z <= 250, 'does not fit X2D bed'
-    assert len(p.solids()) == 1
+    assert p.is_valid and len(p.solids()) == 1
 removed = v0 - bottom.volume - top.volume
 print(f'original {v0/1000:.1f} cm3, removed by holes/pockets/gap {removed/1000:.2f} cm3')
 assert 0 < removed < 5000
@@ -79,6 +100,7 @@ void = extrude(Plane.YZ.offset(-25) * Polygon((-16, Z0), (Y_CEIL, Z0), (APEX, (Z
 bottom_usb = bottom + hump - void
 ports = box(-20, 0, MID - USB_HALF_W, MID + USB_HALF_W, KB_BOT + USB_LO, KB_TOP - USB_HI)   # measured cluster envelope
 assert len(bottom_usb.solids()) == 1
+assert bottom_usb.is_valid
 def vol(x): return 0.0 if x is None else x.volume   # build123d returns None for an empty intersection
 assert vol(bottom_usb & ports) < 1e-6, 'hump intersects the port envelope'
 assert vol(bottom_usb & box(-20, 0, -20, 10, Z0, Z1)) < 1e-6, 'void not clear to +10 over the band'

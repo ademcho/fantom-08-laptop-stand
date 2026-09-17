@@ -3,3 +3,4 @@ __pycache__/
 analysis/
 exports/*.3mf
 .DS_Store
+!exports/bottom_brackets_key_clearance_X2D.3mf

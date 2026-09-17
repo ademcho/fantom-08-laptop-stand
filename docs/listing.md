@@ -21,6 +21,10 @@ I wanted my laptop above my Fantom-08 without a separate stand taking floor spac
 - Optional cross brace between the brackets: either a 2020 aluminum extrusion in printed socket plates, or a fully printed telescoping square tube. Braceless is fine for a 14"; use the brace for a 16" or if you move the keyboard around.
 - Fit coupons: 5 mm slices of the clamp profile in +1.0 / +1.5 / +2.0 / +2.5 mm so you can check the opening on your unit before printing 200 g of PETG. My Fantom-08 wanted +1.0, and that's already in the main files.
 
+**Key-clearance revision (2026-09-16):** the downward hook is 2.5 mm shorter.
+Existing owners can reuse the upper halves and reprint only bottom A and bottom B USB.
+The GitHub repo includes an X2D project containing just these two replacements.
+
 **Print**
 
 PETG, 0.2 mm layers, 4+ walls, 30 %+ infill. Every part lies flat, no supports. Print the halves with the layers running along the post and tray (the strong direction); never stand them up. Right-hand bottom half uses the `_usb` file. Hardware: 4 × M4×20 pan head (×25 with the brace plates), 4 × M4 nuts. Full instructions, cut lengths, and the source in the GitHub repo.

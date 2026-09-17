@@ -1,0 +1,43 @@
+{
+  "revision": "2026-09-16: key-facing hooks shortened 2.5 mm",
+  "project": "bottom_brackets_key_clearance_X2D.3mf",
+  "printer": "Bambu Lab X2D 0.4 nozzle",
+  "slicer": "Bambu Studio 02.08.02.60",
+  "material": "Generic PETG",
+  "bed": "Textured PEI Plate",
+  "layer_height_mm": 0.2,
+  "walls": 4,
+  "infill": "30%",
+  "supports": false,
+  "plates": [
+    {
+      "plate": 1,
+      "part": "bracket_bottom_B_usb.stl",
+      "estimated_seconds": 7998,
+      "estimated_grams": 73.62
+    },
+    {
+      "plate": 2,
+      "part": "bracket_bottom_A.stl",
+      "estimated_seconds": 5985,
+      "estimated_grams": 62.91
+    }
+  ],
+  "estimated_grams": 136.53,
+  "estimated_seconds": 13983,
+  "checks": {
+    "cad_valid_single_solids": true,
+    "closed_print_meshes": true,
+    "only_removed_volume_per_bottom_mm3": 375,
+    "tip_raised_mm": 2.5,
+    "upper_STLs_byte_identical": true,
+    "mesh_repairs": 0,
+    "outside_objects": 0,
+    "skipped_objects": 0
+  },
+  "notes": [
+    "Physical key clearance must be checked on the keyboard; this verifies the requested geometry and local slicing.",
+    "Source Onshape STEP stays unmodified; tools/split.py applies the hook trim during generation.",
+    "Stock X2D end-code emits CLI Invalid T command warnings for T65279/T65535; editable project contains no cached G-code. Select actual bed and filament and re-slice."
+  ]
+}
