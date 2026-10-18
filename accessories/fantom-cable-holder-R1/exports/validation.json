@@ -1,0 +1,81 @@
+{
+  "parameters": {
+    "grip_width_mm": 12.0,
+    "opening_mm": 170,
+    "arm_mm": 12,
+    "hook_drop_mm": 17.5,
+    "comb_x_mm": [
+      -72.0,
+      -10.0
+    ],
+    "comb_y_mm": [
+      -30.0,
+      0.0
+    ],
+    "shelf_z_mm": [
+      128.0,
+      134.0
+    ],
+    "slot_center_y_mm": -23.0,
+    "slots_name_x_width_cable_shoulder_mm": [
+      [
+        "TRS 1",
+        -63,
+        7.0,
+        6.0,
+        12.0
+      ],
+      [
+        "TRS 2",
+        -48,
+        7.0,
+        6.0,
+        12.0
+      ],
+      [
+        "USB thick",
+        -35,
+        5.0,
+        4.0,
+        8.0
+      ],
+      [
+        "USB medium",
+        -25,
+        4.0,
+        3.2,
+        7.0
+      ],
+      [
+        "USB slim",
+        -15,
+        3.2,
+        2.5,
+        6.0
+      ]
+    ]
+  },
+  "reference_sha256": "4fed3d09c92c77ce59b7c7597486e46b33712d6b4637aa19cfecd032ddb0924b",
+  "print_bounds_mm": [
+    252.0,
+    127.37840436312945,
+    30.000000000000014
+  ],
+  "volume_cm3": 68.35745363160662,
+  "solid_PETG_mass_at_1_27_g_cm3": 86.8139661121404,
+  "slicer_estimate": null,
+  "cad_valid": true,
+  "solid_count": 1,
+  "step_roundtrip_valid": true,
+  "mesh_triangles": 60188,
+  "collapsed_STL_triangles_removed": 40,
+  "watertight_edges": true,
+  "mesh_connected_components": 1,
+  "positive_signed_mesh_volume_mm3": 68356.94152959847,
+  "interface_removed_volume_mm3": 0.0,
+  "assumed_cable_and_plug_envelope_intersections_mm3": 0,
+  "added_material_forward_of_rear_plane_mm3": 0,
+  "physical_opposite_side_fit_verified": false,
+  "strength_validated": false,
+  "port_clearance_verified": false
+}

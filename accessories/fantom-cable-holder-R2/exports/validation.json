@@ -1,0 +1,102 @@
+{
+  "parameters": {
+    "grip_width_mm": 12.0,
+    "opening_mm": 170,
+    "arm_mm": 12,
+    "hook_drop_mm": 17.5,
+    "comb_x_mm": [
+      -110.0,
+      -10.0
+    ],
+    "comb_y_mm": [
+      -42.0,
+      0.0
+    ],
+    "shelf_z_mm": [
+      128.0,
+      134.0
+    ],
+    "slot_center_y_mm": -23.0,
+    "slots_name_x_width_cable_shoulder_mm": [
+      [
+        "Extra large 1",
+        -101,
+        9.5,
+        8.0,
+        13.0
+      ],
+      [
+        "Extra large 2",
+        -83,
+        9.5,
+        8.0,
+        13.0
+      ],
+      [
+        "TRS 1",
+        -65,
+        8.5,
+        7.0,
+        12.0
+      ],
+      [
+        "TRS 2",
+        -49,
+        8.5,
+        7.0,
+        12.0
+      ],
+      [
+        "USB thick",
+        -35,
+        5.0,
+        4.0,
+        8.0
+      ],
+      [
+        "USB medium",
+        -25,
+        4.0,
+        3.2,
+        7.0
+      ],
+      [
+        "USB slim",
+        -15,
+        3.2,
+        2.5,
+        6.0
+      ]
+    ]
+  },
+  "reference_sha256": "4fed3d09c92c77ce59b7c7597486e46b33712d6b4637aa19cfecd032ddb0924b",
+  "print_bounds_mm": [
+    228.06098101572613,
+    215.9682005955905,
+    42.000000000000014
+  ],
+  "volume_cm3": 77.40409522287364,
+  "solid_PETG_mass_at_1_27_g_cm3": 98.30320093304952,
+  "slicer_estimate": null,
+  "in_plane_rotation_deg": 45,
+  "slot_seat_depth_from_open_edge_mm": 19,
+  "cad_valid": true,
+  "solid_count": 1,
+  "step_roundtrip_valid": true,
+  "mesh_triangles": 79576,
+  "collapsed_STL_triangles_removed": 56,
+  "watertight_edges": true,
+  "mesh_connected_components": 1,
+  "positive_signed_mesh_volume_mm3": 77403.78276971132,
+  "interface_removed_volume_mm3": 0.0,
+  "assumed_cable_and_plug_envelope_intersections_mm3": 0,
+  "added_material_forward_of_rear_plane_mm3": 0,
+  "physical_opposite_side_fit_verified": false,
+  "strength_validated": false,
+  "port_clearance_verified": false,
+  "R1_physical_feedback": "Owner says grip/holder mostly works; TRS slots pinch",
+  "R2_physical_fit_verified": false,
+  "nominal_min_inter_slot_web_mm": 3.5,
+  "minimum_outer_tip_before_edge_rounding_mm": 2.4,
+  "print_submission": "not attempted; no desktop-control tool"
+}

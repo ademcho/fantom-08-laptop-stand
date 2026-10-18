@@ -1,0 +1,75 @@
+{
+  "parameters": {
+    "cup_inner_diameter_mm": 86.0,
+    "cup_depth_mm": 75.0,
+    "cup_wall_mm": 4.0,
+    "cup_floor_mm": 4.0,
+    "opening_mm": 170,
+    "hook_drop_mm": 17.5,
+    "target_vessel_plus_drink_kg": 0.75,
+    "cup_center_behind_rear_mm": 97.0,
+    "cup_wall_clearance_behind_rear_mm": 50.0,
+    "beverage_gravity_torque_Nm": 0.7136775
+  },
+  "source_sha256": "4fed3d09c92c77ce59b7c7597486e46b33712d6b4637aa19cfecd032ddb0924b",
+  "parts": {
+    "fit_coupon_170mm": {
+      "dimensions_mm": [
+        200.0,
+        124.0,
+        5.0
+      ],
+      "volume_cm3": 24.61,
+      "triangles": 500,
+      "valid_cad": true,
+      "cad_solids": 1,
+      "watertight_edges": true,
+      "mesh_connected_components": 1,
+      "step_solids": 1
+    },
+    "bracket_170mm": {
+      "dimensions_mm": [
+        226.0,
+        124.0,
+        15.0
+      ],
+      "volume_cm3": 95.09,
+      "triangles": 1796,
+      "valid_cad": true,
+      "cad_solids": 1,
+      "watertight_edges": true,
+      "mesh_connected_components": 1,
+      "step_solids": 1
+    },
+    "cup_86x75mm": {
+      "dimensions_mm": [
+        124.0,
+        94.0,
+        79.0
+      ],
+      "volume_cm3": 127.88,
+      "triangles": 2068,
+      "valid_cad": true,
+      "cad_solids": 1,
+      "watertight_edges": true,
+      "mesh_connected_components": 1,
+      "step_solids": 1
+    },
+    "optional_can_insert_70mm": {
+      "dimensions_mm": [
+        79.0,
+        74.246,
+        65.0
+      ],
+      "volume_cm3": 32.34,
+      "triangles": 1036,
+      "valid_cad": true,
+      "cad_solids": 1,
+      "watertight_edges": true,
+      "mesh_connected_components": 1,
+      "step_solids": 1
+    }
+  },
+  "physical_fit_or_load_validated": false,
+  "assembly_interference_mm3": 0
+}

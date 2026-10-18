@@ -74,6 +74,12 @@ over the rear panel was dropped from 20 to 12 mm tall at the same time — it on
 the panel and pulls on the lip, and the lower bar is ~5× easier to spring on and blocks
 less of the panel. Coupons are still cut from the current profile if you need to re-run.
 
+## Cup and cable holders
+
+[Accessory designs, revisions and print projects](accessories/README.md): cup holder R2
+(physically printed successfully), cable holder R2 (larger/deeper seats; GUI slice checked,
+print start unconfirmed), plus archived R1 source and exports.
+
 ## Hardware
 
 - 4 × M4 pan head, **×20 without brace / ×25–30 with brace** (2 per bracket; they are the

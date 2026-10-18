@@ -1,0 +1,329 @@
+{
+  "note": "Hashes of original delivered files before README portability/status edits. No CAD, STL, STEP or 3MF bytes changed.",
+  "files": [
+    {
+      "path": "accessories/fantom-cup-holder-R1/LICENSE",
+      "original_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/README.md",
+      "original_sha256": "d1ccc43a173b21f56bad58f6cb44a9dc552c7d2d7d3dc2fc32c693ea81223156"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/source/slice_settings.json",
+      "original_sha256": "6ece3f79681416d7f257472deef7eb41ab338e2df0688194136be55215d9261a"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/source/kernel.py",
+      "original_sha256": "1886962ef12c5cff8be50edcddea689e488a68dcb37e29229ed414484dcce4e3"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/source/generate.py",
+      "original_sha256": "601ae8f12ea44639ded628831675bb2546e1c323098e8175ff04073f6d463d5f"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/source/render_base.py",
+      "original_sha256": "6af5f21174b942aceacef96bf655681fc71c0b87aee804d1528c5ed57c2de05d"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/source/bracket_reference.step",
+      "original_sha256": "4fed3d09c92c77ce59b7c7597486e46b33712d6b4637aa19cfecd032ddb0924b"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/source/prepare_slicer.py",
+      "original_sha256": "bbd3195b5e313ea872f04826b25a52cb7c1f7a86abcd36c5270e8c8b970529ce"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/source/make_preview.py",
+      "original_sha256": "5770be4a54ae19cf55ed8e78da31ed7ab1cb57beb55211a3da32c66904df76e4"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/optional_can_insert_70mm.step",
+      "original_sha256": "da7d3626241cbc6ae5070c8844a30f07af0a13662ce59d270831713dca2f6033"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/fit_coupon_170mm.stl",
+      "original_sha256": "43af0a7b80ccfaea3d7cd6bba75a124103bdb6b7363c97ea6c1dab45c7ad14b2"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/bracket_170mm.stl",
+      "original_sha256": "e45b23a703d235b6327cef6127fb3c93273356457560c5ab586d93137f183a0e"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/fit_coupon_170mm.step",
+      "original_sha256": "7eafd4860cc624b58bfe7571ad9a0d9919236d2493cbb60945627645f8210a82"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/validation.json",
+      "original_sha256": "ddb9fbe5d5026cadcd1eafd59966ded905ccf672c63a2ec073fbfe0a898a73e6"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/optional_can_insert_70mm.stl",
+      "original_sha256": "b18fac8cfa2ba832532626989d49ca27353b0b46987f2e496110566b259caeca"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/bracket_170mm.step",
+      "original_sha256": "85555145a7ced6a96ba861ea05e45e64f979d9df81759fff10299fc5be08493b"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/cup_86x75mm.step",
+      "original_sha256": "ac76b8a55a7b4dd9d40c0266cbe863fff87fd8f806b1772954eec5686b46b30e"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/assembly.step",
+      "original_sha256": "e8bfb0743c1726e51457be85079a5a85333e06369ea72e59a78a1baceeb42e40"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/exports/cup_86x75mm.stl",
+      "original_sha256": "b125faf423f6bee07c18b682af51432e017a9a9e8d68ad2b606a0ad0f89bc17e"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/slicer-check/optional_can_insert_70mm.3mf",
+      "original_sha256": "83b328c4fbd812eb707f612e04d085b84cd0f017a58420432aeb822d75c45910"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/slicer-check/cup_86x75mm.3mf",
+      "original_sha256": "38f7b445d50272ff1ca02d8b24189135b88c01f6ae7fea2e172c6a4f27b6df9d"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/slicer-check/bracket_170mm.3mf",
+      "original_sha256": "4bbf52961b0c5e64b3d55c39b44d2d4293224538e6ea4dd74ecffe7ae0e85071"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/slicer-check/fit_coupon_170mm.3mf",
+      "original_sha256": "85e89e26b270e83c8467088db082430ccc118ae32e1533ecb69cd256112d7f12"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/previews/assembly.svg",
+      "original_sha256": "8a4b5d6e60f328ba1982e248d2ae3d9dfaa9aa8d9f52b467450ba43db14215ee"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R1/previews/dimensioned-preview.png",
+      "original_sha256": "620a8c0263dcd748c0d4cb2e8eb072daa1ddd767cc59fe5f0969e0068c23ab58"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/LICENSE",
+      "original_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/README.md",
+      "original_sha256": "65a47344d9110fa50b5803bc702cdaa36ef45212c7bf2eb147eaaa044c8d7e54"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/source/kernel.py",
+      "original_sha256": "1886962ef12c5cff8be50edcddea689e488a68dcb37e29229ed414484dcce4e3"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/source/generate.py",
+      "original_sha256": "dda6383cb9a7352d60f642d64880bfa63e9aaa7d04c85ec2d154c47f3c1f3aa4"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/source/render_base.py",
+      "original_sha256": "6af5f21174b942aceacef96bf655681fc71c0b87aee804d1528c5ed57c2de05d"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/source/bracket_reference.step",
+      "original_sha256": "4fed3d09c92c77ce59b7c7597486e46b33712d6b4637aa19cfecd032ddb0924b"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/source/make_preview.py",
+      "original_sha256": "66d26ac2c217f5b24c451e0fd63258e8df875fea2028455ce92370088fec0150"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/optional_can_insert_70mm.step",
+      "original_sha256": "a785c6bbafd074ce6872e9c49af2f5316938d3fbac81cecec1848171ff3c1e0c"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/fit_coupon_170mm.stl",
+      "original_sha256": "8d7ecde8281b6aca2448c34c5517e9cd78dce69259821d39bf6a0c607de40c47"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/bracket_170mm.stl",
+      "original_sha256": "2e1a31f1c2d88e5c03ec5b9757fc380baa9eb9191864baedcae367db00b551d2"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/Fantom-cup-holder-R2-X2D.3mf",
+      "original_sha256": "6981c76a5a4565e94347ea8259f6f22adc55aa6758cd07520c5d8ab0a2b69c5d"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/fit_coupon_170mm.step",
+      "original_sha256": "2c37d413e92f6fae70b5aaece893d87bf6ffda138bae46c25d3db038faf20942"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/Fantom-R2-ready.3mf",
+      "original_sha256": "e73b39602589d060e77f09406127a8e74e695a648734ba7a9958bf18215b2803"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/validation.json",
+      "original_sha256": "626fdb9ad83e85149277d1e7fc8baa55d17f1c72597adcfdf4ee7c2565f20019"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/optional_can_insert_70mm.stl",
+      "original_sha256": "b18fac8cfa2ba832532626989d49ca27353b0b46987f2e496110566b259caeca"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/bracket_170mm.step",
+      "original_sha256": "f0bebfd0e7c711d6d8cf9405510ef684351cc77e2d32190a689fa48477213bc4"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/cup_86x75mm.step",
+      "original_sha256": "ff820bd0a85776c65e9b690d0ad1225e6a714542347cc7fe6331af5072a5f93d"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/assembly.step",
+      "original_sha256": "b23c12599025c3d4b4c7146c17e81da0afd89e121b038b6e25f1562cb01cab46"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/exports/cup_86x75mm.stl",
+      "original_sha256": "f41d2a403697c7e01a2c58d226e974b30e45963024cdb647d3b61507b0aa13d6"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/previews/assembly.svg",
+      "original_sha256": "60b4b041d5a1856e2dbfe5123f6b5b974202331cc0d3a7b58fef22aacaf0d206"
+    },
+    {
+      "path": "accessories/fantom-cup-holder-R2/previews/dimensioned-preview.png",
+      "original_sha256": "6aae4d50f14dc99a8070841490c6a9ef7b79c9a460e296a94d5cbe214a19f142"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/README.md",
+      "original_sha256": "a54bd5e73bea56cdc87f28fe0730e3e6c69a63278ee84a2683cd184de76ab5a8"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/source/kernel.py",
+      "original_sha256": "1886962ef12c5cff8be50edcddea689e488a68dcb37e29229ed414484dcce4e3"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/source/generate.py",
+      "original_sha256": "b9769d3c010ac4ff0fbcd09a70c172c1b5af72e0c295691b6eab13696ab9913d"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/source/render_base.py",
+      "original_sha256": "6af5f21174b942aceacef96bf655681fc71c0b87aee804d1528c5ed57c2de05d"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/source/bracket_reference.step",
+      "original_sha256": "4fed3d09c92c77ce59b7c7597486e46b33712d6b4637aa19cfecd032ddb0924b"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/source/make_dimensions.py",
+      "original_sha256": "d68c9dcdda06b59bc8dd0d03b29d5533ed7642d8d6408eb0925fbab3bc3cc4bf"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/exports/cable-holder-print.3mf",
+      "original_sha256": "95d9971ff8c05f4da3896b26b22f7c9bab19cf2ce8468d4fc4ef1f6ea7dbd102"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/exports/validation.json",
+      "original_sha256": "91d2542f0cc63cab4d0ae37f76c034f55ef18f9d36cc1ee483768ca4b28acd27"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/exports/cable-holder-print.step",
+      "original_sha256": "a7981feca49095d86ea84eb4809f9e717301b6db353108c96df31190bf824c3e"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/exports/cable-holder-print.stl",
+      "original_sha256": "24175bd4e1569772ebc707d9641d9b0fc3ef9e5d5fd6a84d2594e5848f8bae61"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/exports/cable-holder-installed.step",
+      "original_sha256": "ef66ec4bcec46e0c5167799448e0a77a2a1e882e64b192602251c76c632632e9"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/previews/cad-views.svg",
+      "original_sha256": "22ec729f96289c3ef60a8b3403fccfca2a8f5f832ba60032503babf67d4ddaab"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/previews/Fantom-cable-holder-R1-dimensioned.png",
+      "original_sha256": "ca9226d9f7486f22414cb887c20009944248f368f0d8911268e35d688a00df9b"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/previews/cad-view-2.png",
+      "original_sha256": "6715a0e12f436adf14358e57c794cf87102edef39898c1cae88239e326e8978b"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/previews/cad-view-1.png",
+      "original_sha256": "03b245b77f46e5cfa933696f41766fd7b34913bb87fa202da73ebb9dd6b052c5"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R1/previews/dimensioned-preview.svg",
+      "original_sha256": "4128f64e9fb020a6813df07bb0575c27b6c8b88f1257faadf74462f31d2d782f"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/README.md",
+      "original_sha256": "ec56f0b7ee8eb89a3c4dd91131e6138f35d8207d516db9fbb3b29c24aeb33ea7"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/source/kernel.py",
+      "original_sha256": "1886962ef12c5cff8be50edcddea689e488a68dcb37e29229ed414484dcce4e3"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/source/generate.py",
+      "original_sha256": "becc842c18dbedd4e859cd9ab037fadea105c40d825d3889080c478cc7017480"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/source/render_base.py",
+      "original_sha256": "6af5f21174b942aceacef96bf655681fc71c0b87aee804d1528c5ed57c2de05d"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/source/bracket_reference.step",
+      "original_sha256": "4fed3d09c92c77ce59b7c7597486e46b33712d6b4637aa19cfecd032ddb0924b"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/source/prepare_project.py",
+      "original_sha256": "e6679cd47f5dbbf6277b0b6c59ac0d5d617596d1abe3ed9cdab9bd0569c7b6ee"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/source/make_dimensions.py",
+      "original_sha256": "f5aadc5361d8f9f4c74408896343994908ed9d9eded665c6e198655998baf8b6"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/source/check_toolpath.py",
+      "original_sha256": "98a7d3e84d2e5642625c8cfb6cc26336d4876e4a2475aa0ab137ed179e3835f7"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/exports/Fantom-cable-holder-R2-PETG.3mf",
+      "original_sha256": "eff739066522c2eb8d7a6ed81c505478d6b4f55cf06fc96c11c829c40f6ad0d9"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/exports/validation.json",
+      "original_sha256": "c2a398d729175ff676d72ad5a2e6e096727ef4a145b24b8be90475befe14e2aa"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/exports/cable-holder-print.step",
+      "original_sha256": "34633292a37ceb3f3123b18d1a541588970f2d1dbc4a39cebff65a07620ab126"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/exports/cable-holder-print.stl",
+      "original_sha256": "0ef878723f1a29e2331941aa1a4b249802054aa2ea604f1f506514fcc6590e08"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/exports/cable-holder-installed.step",
+      "original_sha256": "40805f2d3c6a43538fb0f7a525d41d9642747218e0e9cada8716ca454d88171b"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/previews/cad-views.svg",
+      "original_sha256": "8652a8bcf632a25a2077046ce33efa1af1326b3422bd033137c2985e1f9b0b6f"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/previews/cad-view-2.png",
+      "original_sha256": "852112129de5ad284aae67acd60c6cb5224365954e2e776fc78c82504f455335"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/previews/cad-view-1.png",
+      "original_sha256": "55137945052da7f672726269ccfb829446b9571155885469dbdf2020dcc57dc4"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/previews/Fantom-cable-holder-R2-dimensioned.png",
+      "original_sha256": "7e199034a7b08d013c58fa969d5a13bf3f580297b94d07206ac100f0e41404b9"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/previews/dimensioned-preview.svg",
+      "original_sha256": "4ee568f8e008ebf575ec2d0c96d4a58e8730fb2beae9015f3ddbcfae7acf217a"
+    },
+    {
+      "path": "accessories/fantom-cable-holder-R2/exports/Fantom-cable-holder-R2-PETG-checked.3mf",
+      "original_sha256": "8c9e9779e846a3b884838acd5f93cb9921b925ce24d7382e42e44fcc8d5d9cc9"
+    }
+  ]
+}
